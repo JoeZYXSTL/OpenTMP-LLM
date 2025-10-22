@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenTMP LLM – Collaborative LLM Framework (MPC‑FL · Private Inference · Distributed Training)</title>
+  <meta name="description" content="OpenTMP LLM: Keep data local while enabling cross‑organization training and encrypted inference. Private · Efficient · Governable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --grad: radial-gradient(1200px 600px at 90% -10%, rgba(56,189,248,.25), transparent 60%),
+                     radial-gradient(1200px 600px at -10% 110%, rgba(167,139,250,.25), transparent 60%); }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .glass { backdrop-filter: blur(8px); background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06)); border: 1px solid rgba(255,255,255,.18); }
+    .chip { border: 1px solid rgba(255,255,255,.35); }
+    .hero-grad { background-image: var(--grad); }
+    .card { transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border-radius:12px; padding:.6rem 1rem; font-weight:600; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="#" class="font-extrabold tracking-tight text-xl">OpenTMP <span class="text-sky-300">LLM</span></a>
+      <nav class="hidden md:flex gap-6 ml-8 text-slate-300">
+        <a href="#why" class="hover:text-white">Why</a>
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#engine" class="hover:text-white">Engine</a>
+        <a href="#usecases" class="hover:text-white">Use Cases</a>
+        <a href="#partners" class="hover:text-white">Partners</a>
+        <a href="#papers" class="hover:text-white">Papers</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <div class="ml-auto flex items-center gap-3">
+        <a href="#contact" class="inline-flex items-center rounded-lg px-4 py-2 border border-white/20 hover:bg-white/10">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative hero-grad">
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(600px_200px_at_40%_-10%,rgba(99,102,241,.35),transparent_70%)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+            Collaborative LLM Framework: <span class="text-sky-300">Data stays local</span> with <span class="text-violet-300">encrypted training & inference</span>.
+          </h1>
+          <p class="mt-5 text-slate-300 text-lg leading-relaxed">
+            OpenTMP LLM orchestrates multi‑party data and compute via MPC‑FL, enabling cross‑organization <strong class="text-white">training</strong> and <strong class="text-white">private inference</strong> —
+            <span class="chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm mr-2">Private</span>
+            <span class="chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm mr-2">Efficient</span>
+            <span class="chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm">Governable</span>
+            collaborative AI.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#features" class="btn bg-white text-slate-900 hover:bg-slate-100">Explore features</a>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-xs text-slate-400">
+            <span class="chip rounded-full px-3 py-1">Data remains on‑prem</span>
+            <span class="chip rounded-full px-3 py-1">Federated / multi‑party</span>
+            <span class="chip rounded-full px-3 py-1">MPC / threshold signing</span>
+            <span class="chip rounded-full px-3 py-1">Edge acceleration</span>
+            <span class="chip rounded-full px-3 py-1">Auditable governance</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="aspect-video rounded-xl bg-gradient-to-br from-sky-400/30 to-violet-400/30 grid place-items-center text-center p-6">
+            <div>
+              <div class="text-sm uppercase tracking-widest text-white/80">OpenTMP LLM Engine</div>
+              <h3 class="mt-2 text-2xl font-bold">Distributed • Private • Governable</h3>
+              <p class="mt-3 text-sm text-white/80">CPU / GPU / NPU compatible · Edge inference & P2P training</p>
+            </div>
+          </div>
+          <div class="mt-4 grid sm:grid-cols-3 gap-3 text-sm">
+            <div class="card rounded-lg border border-white/10 p-3">
+              <div class="font-semibold">Private LLM</div>
+              <p class="mt-1 text-slate-300">On‑device training & encrypted inference.</p>
+            </div>
+            <div class="card rounded-lg border border-white/10 p-3">
+              <div class="font-semibold">Efficient LLM</div>
+              <p class="mt-1 text-slate-300">Edge optimization, distillation & quantization.</p>
+            </div>
+            <div class="card rounded-lg border border-white/10 p-3">
+              <div class="font-semibold">Governable LLM</div>
+              <p class="mt-1 text-slate-300">MPC governance & shared ownership.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section id="why" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">Why OpenTMP LLM?</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">
+            Break data silos and unlock collaboration without data exposure. Institutions co‑build shared model capabilities that meet compliance while optimizing performance and cost.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-200">
+            <li>• Data stays local; sensitive information never leaves the domain</li>
+            <li>• End‑to‑end: federated training + encrypted inference</li>
+            <li>• Multi‑party governance; auditable parameters and access</li>
+            <li>• Works across heterogeneous hardware for edge scenarios</li>
+          </ul>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="card rounded-xl p-4 border border-white/10">
+              <div class="text-sm uppercase tracking-widest text-sky-300">FinTech</div>
+              <div class="mt-1 font-semibold">Cross‑institution training</div>
+              <p class="mt-1 text-slate-300 text-sm">Risk/AML/credit scoring with data retained by each institution.</p>
+            </div>
+            <div class="card rounded-xl p-4 border border-white/10">
+              <div class="text-sm uppercase tracking-widest text-violet-300">Robotics</div>
+              <div class="mt-1 font-semibold">Edge distributed post‑training</div>
+              <p class="mt-1 text-slate-300 text-sm">Robots learn locally and share experience securely.</p>
+            </div>
+            <div class="card rounded-xl p-4 border border-white/10">
+              <div class="text-sm uppercase tracking-widest text-fuchsia-300">AI Agent</div>
+              <div class="mt-1 font-semibold">Private inference</div>
+              <p class="mt-1 text-slate-300 text-sm">User data remains private with authorized, auditable access.</p>
+            </div>
+            <div class="card rounded-xl p-4 border border-white/10">
+              <div class="text-sm uppercase tracking-widest text-emerald-300">Governance</div>
+              <div class="mt-1 font-semibold">Shared model ownership</div>
+              <p class="mt-1 text-slate-300 text-sm">Fair collaboration ensured by MPC/TSS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Core features</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="card rounded-xl p-6 border border-white/10">
+          <h3 class="font-bold text-xl">Private LLM</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• On‑device training & private inference (SMPC/private execution)</li>
+            <li>• Zero data egress with minimized visibility</li>
+            <li>• Flexible to regulatory & audit requirements</li>
+          </ul>
+        </div>
+        <div class="card rounded-xl p-6 border border-white/10">
+          <h3 class="font-bold text-xl">Efficient LLM</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• Edge acceleration: distillation & quantization</li>
+            <li>• Works on CPU / GPU / NPU</li>
+            <li>• P2P cooperative training to reduce cost</li>
+          </ul>
+        </div>
+        <div class="card rounded-xl p-6 border border-white/10">
+          <h3 class="font-bold text-xl">Governable LLM</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• MPC‑based governance & threshold signing</li>
+            <li>• Shared ownership over models & parameters</li>
+            <li>• Authorized access with traceable audit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engine -->
+  <section id="engine" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold">OpenTMP LLM Engine</h2>
+          <p class="mt-4 text-slate-300">A unified distributed LLM framework for edge training, private inference, and governable collaboration.</p>
+          <ul class="mt-6 space-y-3 text-slate-200">
+            <li>• Distributed Edge AI / P2P Training</li>
+            <li>• Secure Private Inference (SMPC)</li>
+            <li>• Distributed Model Governance & Ownership</li>
+            <li>• Seamless Hardware Integration (CPU/GPU/NPU)</li>
+          </ul>
+          <div class="mt-6">
+            <a href="#usecases" class="btn bg-white text-slate-900 hover:bg-slate-100">See use cases</a>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <div class="rounded-xl border border-white/10 p-4">
+            <div class="grid sm:grid-cols-3 gap-3 text-sm">
+              <div class="card rounded-lg p-3 border border-white/10">
+                <div class="font-semibold">Distributed</div>
+                <p class="mt-1 text-slate-300">Multi‑node coordination; elastic orchestration.</p>
+              </div>
+              <div class="card rounded-lg p-3 border border-white/10">
+                <div class="font-semibold">Private</div>
+                <p class="mt-1 text-slate-300">Encrypted compute; zero‑trust collaboration.</p>
+              </div>
+              <div class="card rounded-lg p-3 border border-white/10">
+                <div class="font-semibold">Governable</div>
+                <p class="mt-1 text-slate-300">Parameter ownership & authorization.</p>
+              </div>
+            </div>
+            <div class="mt-4 aspect-video rounded-lg bg-slate-900/60 grid place-items-center">
+              <div class="text-center text-sm text-white/80">Engine Diagram Placeholder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="usecases" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Use cases</h2>
+      <div class="mt-8 grid lg:grid-cols-3 gap-6">
+        <div class="card rounded-xl p-6 border border-white/10">
+          <div class="text-sm uppercase tracking-widest text-sky-300">FinTech</div>
+          <h3 class="mt-1 font-bold text-xl">Cross‑institution training</h3>
+          <p class="mt-2 text-slate-300">Risk, AML, and credit scoring with measurable contribution & governance.</p>
+        </div>
+        <div class="card rounded-xl p-6 border border-white/10">
+          <div class="text-sm uppercase tracking-widest text-violet-300">Robotics</div>
+          <h3 class="mt-1 font-bold text-xl">Edge post‑training & inference</h3>
+          <p class="mt-2 text-slate-300">Incremental learning locally; encrypted experience sharing across devices.</p>
+        </div>
+        <div class="card rounded-xl p-6 border border-white/10">
+          <div class="text-sm uppercase tracking-widest text-fuchsia-300">AI Agent</div>
+          <h3 class="mt-1 font-bold text-xl">Private user data</h3>
+          <p class="mt-2 text-slate-300">Private inference inside enterprises or devices with auditable access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Ecosystem & partnerships</h2>
+      <p class="mt-3 text-slate-300">Co‑building collaborative AI with robotics and edge partners, e.g., RobinX and TAI Phone (examples).</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-sm uppercase tracking-widest text-violet-300">Robotics</div>
+          <h3 class="mt-1 font-bold text-xl">RobinX × State Labs</h3>
+          <ul class="mt-2 text-slate-300 space-y-1 text-sm">
+            <li>• Labeled data & edge post‑training</li>
+            <li>• Sensitive data protection</li>
+            <li>• Edge‑optimized VLA</li>
+          </ul>
+        </div>
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-sm uppercase tracking-widest text-sky-300">Edge Device</div>
+          <h3 class="mt-1 font-bold text-xl">TAI Phone × State Labs</h3>
+          <ul class="mt-2 text-slate-300 space-y-1 text-sm">
+            <li>• Secure data on trusted hardware</li>
+            <li>• On‑device private inference</li>
+            <li>• Distributed post‑training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Papers -->
+  <section id="papers" class="py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Selected papers</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="card rounded-xl p-6 border border-white/10">
+          <div class="font-semibold">SMPC</div>
+          <ul class="mt-2 list-disc list-inside text-slate-300 text-sm leading-6">
+            <li>ASIACRYPT’21 Efficient Threshold ECDSA (Class Groups)</li>
+            <li>CCS’21 Online‑friendly Two‑Party ECDSA</li>
+            <li>ESORICS MPC‑in‑Multi‑Heads (multi‑prover ZK)</li>
+          </ul>
+        </div>
+        <div class="card rounded-xl p-6 border border-white/10">
+          <div class="font-semibold">ZKML</div>
+          <ul class="mt-2 list-disc list-inside text-slate-300 text-sm leading-6">
+            <li>CCS zkCNN (ZK proofs of CNN inference & accuracy)</li>
+            <li>USENIX Security Mystique (faster ZK transforms for ML)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400">Note: Papers are representative references; implementation follows the engineering of OpenTMP LLM.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Collaborate -->
+  <section id="contact" class="py-24 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-extrabold">Collaborate with us</h2>
+      <p class="mt-4 text-lg text-slate-300">Bring collaborative intelligence to your chain, robotics, or agent network.</p>
+      <div class="mt-6 text-left max-w-2xl mx-auto">
+        <ul class="list-disc list-inside text-slate-300 leading-8">
+          <li>Cross‑organization training & encrypted inference</li>
+          <li>Integration with edge devices and federated partners</li>
+          <li>PoC & deployment support for institutions</li>
+        </ul>
+      </div>
+
+      <div class="mt-10">
+        <div class="mx-auto max-w-3xl glass bg-white/5 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center">
+            <a href="mailto:joezyx@statelabs.ai" class="btn bg-white text-slate-900 hover:bg-slate-100">Email us</a>
+            <a href="https://x.com/STL_AI" class="btn border border-white/20 hover:bg-white/10">X / Twitter</a>
+            <a href="https://linkedin.com/company/statelabs-ai" class="btn border border-white/20 hover:bg-white/10">LinkedIn</a>
+          </div>
+          <p class="mt-6 text-sm text-slate-400">Prefer email for security‑sensitive or partnership inquiries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-400">
+      © <span id="y"></span> State Labs · OpenTMP LLM. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
